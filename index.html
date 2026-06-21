@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security: Content Security Policy to prevent XSS -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    
+    <!-- Accessibility & SEO: Clear description -->
+    <meta name="description" content="EcoStep: Track, understand, and reduce your daily carbon footprint with personalized insights.">
+    
+    <title>EcoStep | Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>EcoStep</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#calculator">Log Activity</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Section 1: Dashboard -->
+        <section id="dashboard" aria-labelledby="dashboard-heading">
+            <h2 id="dashboard-heading">Your Carbon Dashboard</h2>
+            <div class="summary-cards">
+                <article class="card" tabindex="0">
+                    <h3>Total Daily Emissions</h3>
+                    <p id="total-co2" aria-live="polite">0 kg CO₂</p>
+                </article>
+                <article class="card" tabindex="0">
+                    <h3>Impact Level</h3>
+                    <p id="impact-status" aria-live="polite">Excellent</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Activity Logger (Structure) -->
+        <section id="calculator" aria-labelledby="calculator-heading">
+            <h2 id="calculator-heading">Log an Action</h2>
+            <!-- We will build the secure form in the next steps -->
+            <div id="form-container"></div>
+        </section>
+
+        <!-- Section 3: Personalized Insights -->
+        <section id="insights" aria-labelledby="insights-heading">
+            <h2 id="insights-heading">Personalized Insights</h2>
+            <ul id="insights-list" aria-live="polite">
+                <li>Log your first activity to get recommendations!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 EcoStep. Built for a greener future.</p>
+    </footer>
+
+    <!-- Efficiency: Defer script execution until HTML is parsed -->
+    <script src="app.js" defer></script>
+</body>
+</html>
